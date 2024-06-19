@@ -3,7 +3,6 @@ package no.fintlabs.consumer.model.applikasjonsressurstilgjengelighet;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import no.fint.antlr.FintFilterService;
-import no.fint.model.resource.ressurs.eiendel.ApplikasjonResource;
 import no.fint.model.resource.ressurs.eiendel.ApplikasjonsressurstilgjengelighetResource;
 import no.fint.relations.FintRelationsMediaType;
 import no.fintlabs.consumer.config.RestEndpoints;

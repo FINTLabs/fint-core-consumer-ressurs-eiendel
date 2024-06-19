@@ -1,7 +1,5 @@
 package no.fintlabs.consumer.model.applikasjonsressurstilgjengelighet;
 
-import no.fint.model.resource.ressurs.eiendel.ApplikasjonResource;
-import no.fint.model.resource.ressurs.eiendel.ApplikasjonsressursResource;
 import no.fint.model.resource.ressurs.eiendel.ApplikasjonsressurstilgjengelighetResource;
 import no.fintlabs.core.consumer.shared.config.ConsumerProps;
 import no.fintlabs.core.consumer.shared.resource.ConsumerConfig;

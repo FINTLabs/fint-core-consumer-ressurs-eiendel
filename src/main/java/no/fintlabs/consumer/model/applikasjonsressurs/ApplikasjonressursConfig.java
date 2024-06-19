@@ -1,6 +1,5 @@
 package no.fintlabs.consumer.model.applikasjonsressurs;
 
-import no.fint.model.resource.ressurs.eiendel.ApplikasjonResource;
 import no.fint.model.resource.ressurs.eiendel.ApplikasjonsressursResource;
 import no.fintlabs.core.consumer.shared.config.ConsumerProps;
 import no.fintlabs.core.consumer.shared.resource.ConsumerConfig;
