@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fint-core-consumer-ressurs-eiendel
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8080"
+        prometheus.io/path: "ressurs/eiendel/actuator/prometheus"
+    spec:
+      restartPolicy: Always
+      volumes:
+        - name: credentials
+          secret:
+            secretName: fint-core-consumer-ressurs-eiendel-kafka-certificates
+      containers:
+        - image: ghcr.io/fintlabs/fint-core-consumer-ressurs-eiendel:sha-0000000
+          name: fint-core-consumer-ressurs-eiendel
+          volumeMounts:
+            - name: credentials
+              mountPath: /credentials
+          resources:
+            limits:
+              memory: "1152Mi"
+              cpu: "1"
+            requests:
+              memory: "512Mi"
+              cpu: "100m"
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - secretRef:
+                name: fint-core-consumer-ressurs-eiendel-kafka
+            - configMapRef:
+                name: fint-core-consumer-ressurs-eiendel

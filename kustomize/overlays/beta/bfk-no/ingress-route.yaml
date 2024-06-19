@@ -1,0 +1,13 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: fint-core-consumer-ressurs-eiendel
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: "Host(`beta.felleskomponent.no`) && (PathPrefix( `/ressurs/eiendel`) && Headers(`x-org-id`, `bfk.no`))"
+      kind: Rule
+      services:
+        - name: fint-core-consumer-ressurs-eiendel
+          port: 8080
