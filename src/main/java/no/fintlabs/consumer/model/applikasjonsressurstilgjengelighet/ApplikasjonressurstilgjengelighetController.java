@@ -24,6 +24,6 @@ public class ApplikasjonressurstilgjengelighetController extends ConsumerRestCon
 
     @PostConstruct
     private void registerIdentificators() {
-        super.registerIdenficatorHandler("systemId", ApplikasjonsressurstilgjengelighetResource::getSystemId);
+        super.registerIdenficatorHandler("systemid", ApplikasjonsressurstilgjengelighetResource::getSystemId);
     }
 }

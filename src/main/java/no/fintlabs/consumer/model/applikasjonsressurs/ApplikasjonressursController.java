@@ -24,6 +24,6 @@ public class ApplikasjonressursController extends ConsumerRestController<Applika
 
     @PostConstruct
     private void registerIdentificators() {
-        super.registerIdenficatorHandler("systemId", ApplikasjonsressursResource::getSystemId);
+        super.registerIdenficatorHandler("systemid", ApplikasjonsressursResource::getSystemId);
     }
 }
